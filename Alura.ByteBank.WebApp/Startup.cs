@@ -28,7 +28,7 @@ namespace Alura.ByteBank.WebApp
             Configuration = configuration;
         }
         public IConfiguration Configuration { get; }
-
+        //Adicionando comentário.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddTransient<IAgenciaRepositorio, AgenciaRepositorio>();
