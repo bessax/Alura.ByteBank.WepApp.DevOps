@@ -18,19 +18,9 @@ namespace Alura.ByteBank.Dados.Contexto
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
 
-            //var configuration = new ConfigurationBuilder()
-            //                                .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
-            //                                .AddJsonFile("appsettings.json")  
-            //                                .AddUserSecrets<ByteBankContexto>()                                          
-            //                                .Build();
-            //var stringconexao = configuration.GetConnectionString("Homologacao");
-
-            //string defaultConnection = Environment.GetEnvironmentVariable("string");
-
-            //string defaultConnection = ConfigurationManager.ConnectionStrings["MinhaConexao"].ToString();
-
-            string stringconexao = "server=localhost;" +
-                                   "DataBase=bytebankBD_webapp;Uid=root;Pwd=root"; 
+            string stringconexao = "Server = bytebankapp.mysql.database.azure.com; " +
+                                   "Port = 3306; Database = bytebankbd_webapp; Uid = andre@bytebankapp;" +
+                                   "Pwd = Alura010203;";
 
             optionsBuilder.UseMySql(stringconexao, 
                                     ServerVersion.AutoDetect(stringconexao));
