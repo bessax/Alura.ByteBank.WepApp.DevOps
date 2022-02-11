@@ -19,7 +19,7 @@ namespace Alura.ByteBank.Dados.Contexto
         {
 
             string stringconexao = "Server = bytebankapp.mysql.database.azure.com; " +
-                                   "Port = 3306; Database = bytebankbd_webapp; Uid = andre@bytebankapp;" +
+                                   "Port = 3306;Database = bytebankbd_webapp;Uid = andre@bytebankapp;" +
                                    "Pwd = Alura010203;";
 
             optionsBuilder.UseMySql(stringconexao, 
