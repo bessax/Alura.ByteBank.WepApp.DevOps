@@ -1,6 +1,7 @@
 ﻿using Alura.ByteBank.Dominio.Entidades;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Configuration;
 
@@ -13,15 +14,14 @@ namespace Alura.ByteBank.Dados.Contexto
         public DbSet<Agencia> Agencias { get; set; }
         public DbSet<UsuarioApp> Usuarios { get; set; }
 
-        private readonly IConfiguration Configuration;
-
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            
 
             string stringconexao = "Server = bytebankapp.mysql.database.azure.com; " +
                                    "Port = 3306;Database = bytebankbd_webapp;Uid = andre@bytebankapp;" +
-                                   "Pwd = Alura010203;";
-
+                                   "Pwd = Icaro123;";
+           
             optionsBuilder.UseMySql(stringconexao, 
                                     ServerVersion.AutoDetect(stringconexao));
         }
